@@ -1,0 +1,175 @@
+envirList:
+  - name: qa
+    baseUri: http://192.168.1.245
+    host: mini.browser.360.cn
+
+  - name: gray
+    baseUri: http://10.198.171.67:8080
+    host: mini.browser.360.cn
+
+  - name: product
+    baseUri: http://180.163.247.163
+    host: mini.browser.360.cn
+
+apiList:
+  - name: 获取17广告
+    method: get
+    path: /tray/c
+    params: type=17&mid=7e6e4d74c691cf41cd385e277885232a&cv=12%2E2%2E1768%2E0&av=1
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取13广告
+    method: get
+    path: /tray/c
+    params: type=13&mid=b8d399223f4c1a211a2715568ae94af7&cv=12%2E2%2E1632%2E0
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 行为打点
+    method: get
+    path: /tray/statistics
+    params: uid=a2020122374423343&tp=1&act=show
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取地域
+    method: get
+    path: /area/getarea
+    params: callback=jQuery110205411814344027639_1608685196304&_=1608685196305
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取地域level
+    method: get
+    path: /area/getarealevel
+    params: callback=jQuery34108501155692942892_1608685192215&_=1608685192216
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取位置
+    method: get
+    path: /area/getlocation
+    params: ''
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取频道信息
+    method: get
+    path: /flow/getchannelinfo
+    params: 'callback=jQuery110207873179837637003_1608684198811&t=minimerge&m=getchannellist&mid=4e2a1a023a2dac04d9585de71efd2652&ch=128&reqtimes=1&cname=%E6%8E%A8%E8%8D%90&_=1608684198813'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取频道列表
+    method: get
+    path: /feed/header
+    params: 'cb=jQuery22403739755779868781_1608685344887&mid=ab6d3a2e003b85c517fc612ebbb41812&v=1.1&scene=newtab_feed&_=1608685344888'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取频道数据
+    method: get
+    path: /feed/list
+    params: 'cb=jQuery20008113003854925431_1608685195749&mid=bf4129ca90aa2f2fed325480714d43ce&channel=video&page=0&page_size=10&scene=error_video&cv=12.2.1768.0&action=5&v=1.1&_=1608685195755'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取so数据
+    method: get
+    path: /feed/so
+    params: 'mid=6b56eddd7915b2337cbc7e14a63fd398&scene=read_ext&n=6&q=%E6%8E%A2%E7%B4%A2%E4%BA%BA%E6%89%8D%E4%BE%9B%E9%9C%80%E6%96%B0%E6%A8%A1%E5%BC%8F+%E6%9E%84%E5%BB%BA%E4%BA%BA%E6%89%8D%E5%8F%91%E5%B1%95%E6%96%B0%E8%B7%AF%E5%AD%90'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取transcode数据
+    method: get
+    path: /feed/transcode
+    params: 'url=http%3A%2F%2Fzm.news.so.com%2F0a7d1c804aa856c4edb796f0e60f4393&from=jrbd&mid=5c8afa3993d59af13b158078deb369b5&scene=read_ext2'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取wpm数据
+    method: get
+    path: /feed/wpm
+    params: 'mid=61e9b7f41badd5eb1f9bf2f8f035f8a6&version=1.0.0.1000&m2=4bcde877f54adcb8662c595e8847feffde0cf3012b95&llqver=12.2.1294.0'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取/wallpaper数据
+    method: get
+    path: /wallpaper
+    params: 'mid=ba684ea3274d6b288fbc8747bfe274be&pid=&act=&_=53622854'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取/wallpaper/list数据
+    method: get
+    path: /wallpaper/list
+    params: 'mid=86d51a82bcbb5ebe8aa0adb7cf5b3651'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取/wallpaper/know数据
+    method: get
+    path: /wallpaper/know
+    params: 'mid=54c968e4e83796e7e0581554a4a009be&cb=jsonp_1608685293850_33417'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取/weather/lp数据
+    method: get
+    path: /weather/lp
+    params: 'cb=callback&mid=ebb91fe1d21c579f0ac5da624f431e2b&v=1&cv=12.3.1280.0&_=1608685160294'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 获取/weather/motto数据
+    method: get
+    path: /weather/motto
+    params: 'src=1&cb=jsonp_1608685558562_72595'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
+
+  - name: 广告商业化打点
+    method: post
+    path: /tray/dot
+    params: '{\x22m\x22:\x225eadf0583af5b5bfb7527b3af077e567\x22,\x22s\x22:12,\x22t\x22:1,\x22c\x22:\x22{\x5C\x22p\x5C\x22:[\x5C\x22http://max-l.mediav.com/rtb?type=2\x5C\x5Cu0026v=CGQSEDE0Y2JjMzQ5NzcwYzA5ZTUYjuaOASCDiD0oAWIXMjkwOTI1MjQ5Mjg1NDA2MjYwNDAwMjBwAYgBBJoBEDE0Y2JjMzQ5NzcwYzE1ZTWiARAxNGNiYzM0OTc3MGMwOWU1\x5C\x5Cu0026k=oja/yQAAAAA=\x5C\x5Cu0026ver=1\x5C\x5Cu0026exp=EQBDEgBDMQBDVABDcQBDggBDIAJDBQBECgBECQFEOAJERQJE\x5C\x5Cu0026w=AAAAAF_jJSUAAAAAAAiUf1BMg4-bBft790gXzw\x5C\x5Cu0026i=XQEjIoKPpDGH\x5C\x5Cu0026st=__EVENT_TIME_START__\x5C\x5Cu0026et=__EVENT_TIME_END__\x5C\x22,\x5C\x22http://s3.nzbdw.com/s?type=1\x5C\x5Cu0026r=20\x5C\x5Cu0026tid=ZmVjMDE2ZDUxYzZkZTc5ZmNlZmYwZmFlNmExZmMzOTI\x5C\x5Cu0026finfo=DAABCAABAAACZwgAAgAAAA8EAAM/j4A9ZEz39QAIAAIAAAADCgADTetwR9JdmqcIAAQAAAAoBgAKAAAGAA0ttwoADwAAAAAAXddwAA\x5C\x5Cu0026mv_ref=se.360.cn\x5C\x5Cu0026enup=CAABtsgELggAAi4EyLYA\x5C\x5Cu0026mvid=MjkwOTI1MjQ5Mjg1NDA2MjYwNDAwMjA\x5C\x5Cu0026bid=14cbc349770c09e5\x5C\x5Cu0026ugi=FYaQehWulltMFQIVoAMVuAMVAAAV7sqMpw0WhAgVyAEWgM2+2PbH2wUcFvXR+bi114Wx6AEVAAAl/MqT8AUA\x5C\x5Cu0026uai=FZzMnQIlAhUEFvDo/97gy7PrmwEV8gcluf/OpAoUDBUAFRIUCBwWtMma67qksrBAFQAAAA\x5C\x5Cu0026ubi=FZLXfRWOzrgDFeqh6RsVotXyXxUEFQIW0uXusxgW8OiUxuqRuOubATQCFqCigoAIJQYVzMqgWxWgBBUANsXft7LGztiMhQEVAEUIAA\x5C\x5Cu0026ds=1\x5C\x5Cu0026price=AAAAAF/jJSUAAAAAAAiUZxaXC/n8cGQma+hCxA==\x5C\x22],\x5C\x22i\x5C\x22:\x5C\x22http://max-l.mediav.com/rtb?type=4\x5C\x5Cu0026impargs=aHR0cDovL3MzbS5uendncy5jb20vZ2FsaWxlby9kNzQ0MWJjNmRhZjgxNWY1YjAzZjk3ZWQ3ZTIxMzUxZi5qcGc\x5C\x22}\x22}'
+    timeout: 30
+    headers:
+      Content-Type: text/plain
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36 QIHU 360SE
