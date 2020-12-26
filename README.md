@@ -157,5 +157,12 @@ list:
 ./mac -c ./roach.360tryst.com.yml -o ./roach-result.yml
 ```
 
+## 手动编译执行
+
+> 1.按照业务需求修改源码
+
+> 2.go build -o bin-file
+
+> 3.bin-file -c cases.yml -o cases-result.yml
 
 
