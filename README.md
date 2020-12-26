@@ -9,7 +9,7 @@
 
 > 使用效果
 
-![image](https://github.com/jhq0113/multi-env-api-test/blob/main/process.png?raw=true)
+![image](https://github.com/jhq0113/multi-env-api-test/blob/main/proc.png?raw=true)
 
 ## 配置文件示例
 
