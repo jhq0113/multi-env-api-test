@@ -36,7 +36,7 @@ func main() {
 		)
 
 		for envirIndex, _ := range conf.EnvirList {
-			Info("开始发送请求：%s", conf.ApiList[apiIndex].Name)
+			Info("开始发送请求：[%s环境] %s", conf.EnvirList[envirIndex].Name, conf.ApiList[apiIndex].Name)
 			resp, body := NewRequest(&conf.ApiList[apiIndex], &conf.EnvirList[envirIndex]).Send()
 
 			response := NewResponse(&conf.EnvirList[envirIndex], resp, body)
