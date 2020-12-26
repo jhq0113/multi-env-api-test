@@ -25,8 +25,8 @@ envirList:
     host: roach.360tryst.com
 
   - name: product
-    baseUri: 'http://404.360tryst.com'
-    host: product.360tryst.com
+    baseUri: 'https://404.360tryst.com'
+    host: 404.360tryst.com
 
 #接口列表
 apiList:
