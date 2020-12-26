@@ -7,6 +7,10 @@
 * 3.项目接口列表以yml格式罗列，自动化测试接口
 * 4.多环境响应结果实时比对，增加测试效率
 
+> 使用效果
+
+![image](https://github.com/jhq0113/multi-env-api-test/blob/main/process.png?raw=true)
+
 ## 配置文件示例
 
 ```yaml
