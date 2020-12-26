@@ -12,7 +12,7 @@ var (
 
 func main() {
 	flag.StringVar(&configFileName, "c", "./cases.yml", "配置文件全路径")
-	flag.StringVar(&outFileName, "o", "./cases-result.yaml", "输出文件全路径")
+	flag.StringVar(&outFileName, "o", "./cases-result.yml", "输出文件全路径")
 	flag.Parse()
 
 	Warning("使用配置文件：%s，结果输出到文件：%s", configFileName, outFileName)
