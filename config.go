@@ -17,7 +17,7 @@ type Api struct {
 	Method  string            `yaml:"method"`
 	Path    string            `yaml:"path"`
 	Params  string            `yaml:"params"`
-	timeout int64             `yaml:"timeout"`
+	Timeout int64             `yaml:"timeout"`
 	Headers map[string]string `yaml:"headers"`
 }
 

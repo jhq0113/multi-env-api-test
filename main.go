@@ -17,7 +17,12 @@ func main() {
 
 	Warning("使用配置文件：%s，结果输出到文件：%s", configFileName, outFileName)
 
+	Info("开始加载配置文件%s", configFileName)
+
 	conf := LoadConf(configFileName)
+
+	Info("配置文件加载完成")
+
 	resultList := &ResultList{
 		List: make([]Result, 0, len(conf.ApiList)),
 	}
@@ -31,6 +36,7 @@ func main() {
 		)
 
 		for envirIndex, _ := range conf.EnvirList {
+			Info("开始发送请求：%s", conf.ApiList[apiIndex].Name)
 			resp, body := NewRequest(&conf.ApiList[apiIndex], &conf.EnvirList[envirIndex]).Send()
 
 			response := NewResponse(&conf.EnvirList[envirIndex], resp, body)
@@ -56,6 +62,7 @@ func main() {
 		resultList.List = append(resultList.List, result)
 	}
 
+	Info("正在生成测试文件%s", outFileName)
 	Out2File(resultList, outFileName)
 
 	Info("测试结果已生成到文件[%s]中", outFileName)

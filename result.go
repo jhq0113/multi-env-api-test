@@ -7,6 +7,12 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+var (
+	defaultFailReponse = &http.Response{
+		StatusCode: -1,
+	}
+)
+
 type Response struct {
 	Envir    string `yaml:"envir"`
 	HttpCode int    `yaml:"httpCode"`
@@ -14,11 +20,13 @@ type Response struct {
 }
 
 func NewResponse(envir *Envir, response *http.Response, body []byte) Response {
-	return Response{
+	resp := Response{
 		Envir:    envir.ToString(),
 		HttpCode: response.StatusCode,
 		Body:     string(body),
 	}
+
+	return resp
 }
 
 type ResultList struct {

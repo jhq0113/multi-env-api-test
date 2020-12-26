@@ -13,7 +13,7 @@ import (
 
 const (
 	DefaultMethod  = "GET"
-	DefaultTimeout = 30
+	DefaultTimeout = 10
 )
 
 type Request struct {
@@ -34,6 +34,14 @@ func NewRequest(api *Api, envir *Envir) *Request {
 		Headers: api.Headers,
 	}
 
+	if api.Method != "" {
+		req.Method = strings.ToUpper(api.Method)
+	}
+
+	if api.Timeout > 0 {
+		req.Timeout = api.Timeout
+	}
+
 	if envir.Host != "" {
 		if req.Headers == nil {
 			req.Headers = make(map[string]string, 1)
@@ -45,7 +53,6 @@ func NewRequest(api *Api, envir *Envir) *Request {
 }
 
 func (r *Request) Send() (response *http.Response, body []byte) {
-	r.Method = strings.ToUpper(r.Method)
 	var reqBody io.Reader
 	if r.Params != nil {
 		args := bytes.NewBufferString("")
@@ -105,7 +112,7 @@ func (r *Request) Send() (response *http.Response, body []byte) {
 	response, err = client.Do(req)
 	if err != nil {
 		Error(err.Error())
-		return nil, nil
+		return defaultFailReponse, make([]byte, 0)
 	}
 
 	defer response.Body.Close()
